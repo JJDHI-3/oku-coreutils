@@ -1,0 +1,95 @@
+OKU PUBLIC LICENSE 1.9.0 (OPLv1.9)
+ Tue, Jun 16, 2026, 12:40pm (AEST)
+MODIFICATION OF THIS LICENSE TEXT IS FORBIDDEN.
+
+Permission for distributing verbatim copies of this license has been granted. Refer to https://github.com/JJDHI-3/oku-public-license for more information.
+
+Original code is permanently attributed to its authors:
+----------
+Copyright (c) <year> <authors & co-authors>
+----------
+
+/Disclaimer of Liability/
+----------
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY.
+----------
+
+/Modification to License Clause/
+----------
+Modifications to the Oku Public License text may be requested via contact to the writer of the license (Aaha3 / JJDHI-3). You are permitted to request any change to the OPL, but approval is at the writer's discretion.
+
+If the OPL does not suit a project's exact needs, the text may be used as a template for a custom license. However, the resulting license is not considered the OPL, must not use the OKU name, and the writer of this license takes no responsibility for its legal outcomes.
+----------
+
+/Definitions/
+----------
+Author - The individual(s) or entity who wrote the original code. The OKU philosophy dictates that code is thought made executable, and human thought cannot be owned. Therefore, the Author retains permanent credit for creation, but relinquishes exclusive ownership of the code itself.
+
+Derivative Work - Software that is built upon or incorporates OKU-governed code, but introduces substantial, functional modifications.
+----------
+
+/Sublicensing & Attribution Clause/
+----------
+Licensees are granted the right to sublicense Derivative Works under terms of their choosing, including proprietary and closed-source terms, provided that the original OPL license text and Author attribution are preserved.
+
+CRITICAL ATTRIBUTION REQUIREMENT: No matter what, author credit MUST be placed somewhere substantial and publicly accessible. If the Derivative Work is proprietary, commercial, or closed-source (such as a backend service or SaaS), this attribution cannot be hidden in a private repository. It must be prominently visible to the end-user (e.g., in public documentation, an "About" menu, or a dedicated credits page).
+
+The sole method to bypass crediting the Author is if the original Author grants explicit, written consent to waive their right to public attribution.
+
+When writing authorship notices, refer to this template:
+
+// Copyright (C) 23 Dec 2025 Moe Ghoul
+// Licensed under the Oku Public License (OPL)
+
+And when building upon another's code:
+
+// Copyright (C) 26 Dec 2025 John Hacker. Original logic derived from Moe Ghoul.
+// Licensed under the Oku Public License (OPL)
+----------
+
+/Preamble/
+----------
+The Oku Public License stands for freedom, in the definition brought by the user. This license allows users to base code under this license for building proprietary codebases, or to build open-source ones.
+
+This license is built for keeping the Author's efforts in building software to heart, ensuring software can freely evolve while preserving the legacy of the humans who built it.
+----------
+
+/Terms and Conditions for Modification & Distribution/
+----------
+Everyone is granted permission to modify and distribute source code covered by the Oku Public License. Portions of a project governed by separate licenses are exempt from OPL terms.
+
+Modifications are highly encouraged. However, to officially claim a project as a "Derivative Work"—and thereby gain the right to sublicense it under different terms—the user must satisfy one of two methods:
+
+Method A: Substantial Modification
+- The user must fundamentally modify or improve the code's logic.
+- Changes must directly affect how the code runs, executes, or processes data. Superficial changes (such as renaming variables, reformatting whitespace, or changing comments) do not constitute a Derivative Work.
+
+Method B: Author Permission
+- The user may contact the original Author and receive explicit, written permission to claim the code as a "Derivative Work" without meeting the logic thresholds of Method A.
+
+Once a user's claim for a Derivative Work is legitimate via either method, they are permitted to use and distribute the software as they please, provided they remain in strict compliance with the substantial public attribution requirements of this license.
+----------
+
+/Appendix/
+----------
+1. SCOPE AND PERMISSIONS
+- General Rights: Users are explicitly permitted to modify and distribute source code covered by the Oku Public License (OPL).
+- Exclusions: These terms apply strictly to code originally licensed under the OPL. Portions of source code governed by other licenses are exempt from OPL terms.
+
+2. DEFINING "DERIVATIVE WORK"
+Modifications are encouraged. However, to officially claim the code as a "Derivative Work" and gain the right to sublicense it under new terms, specific criteria must be met via one of two methods:
+
+Method A: Substantial Modification
+- The user must modify or improve the code's logic.
+- Changes must affect how the code runs or processes data.
+- The modification must be substantial and functional compared to its original state.
+
+Method B: Author Permission
+- The user may contact the original Author and receive explicit, written permission to claim the code as a "Derivative Work."
+
+3. USAGE AND ATTRIBUTION RIGHTS
+Once the requirements for a Derivative Work are met (via Method A or Method B), the user is permitted to use, sublicense, or sell the software at their discretion, provided all usage complies with the absolute rule of public attribution to the original Author.
+----------
+
+That's all there is to it!
+
