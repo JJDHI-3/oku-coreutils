@@ -1,0 +1,11 @@
+# OKUmake `okucc`
+#
+
+default: cc0 bootsrap
+
+cc0:
+	@cc *.c -o cc0
+	@echo "  CC    cc0"
+bootsrap:
+	@./cc0 -o okucc *.c
+	@echo "  CC0   okucc"

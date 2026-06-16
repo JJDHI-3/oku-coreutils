@@ -1,0 +1,3 @@
+default:
+	@okucc -o okuman okuman.c
+	@echo "  CC    okuman.c"
