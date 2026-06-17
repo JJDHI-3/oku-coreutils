@@ -1,0 +1,88 @@
+.TH SH 1 "16 June 2026" "OKU Foundation" "Usage Manual"
+.SH NAME
+.B sh
+\(en the minimalist Oku command shell
+.SH SYNOPSIS
+
+\fBsh\fP
+.RB [ -c
+.IR command_string ]
+.RB [ -v ]
+.RI [ file ]
+
+.SH DESCRIPTION
+
+The
+.B sh
+utility is a minimalist command language interpreter that executes commands 
+read from standard input, a specified string, or a script file. It serves as 
+the primary interactive and scripting interface for the OKU ecosystem.
+
+True to the OKU philosophy,
+.B sh
+is designed around absolute simplicity and architectural transparency. It 
+dispenses with complex, heavy runtime abstractions, managing process execution, 
+environment variables, and input/output pipelines via direct, raw system call 
+interfaces. In alignment with tools like
+.BR TAQBOL ,
+it avoids unnecessary user-space runtime layers to ensure lightning-fast execution 
+and completely predictable resource usage.
+
+.SH OPTIONS
+
+.IP \fB-c\fP\ \fIcommand_string\fP
+Read and execute commands from the literal text provided in
+.IR command_string ,
+then exit.
+.IP \fB-v\fP
+Display the current version, build parameters, and OKU authorship credits, 
+then exit successfully.
+
+.SH OPERANDS
+
+The following operand is supported:
+.IP \fIfile\fP
+The pathname of a text file containing commands to be executed sequentially. 
+If no file or
+.B -c
+string is specified,
+.B sh
+enters interactive mode, reading from standard input.
+
+.SH INTERNALS AND REDIRECTION
+
+Like standard minimalist environments,
+.B sh
+supports essential process pipeline control mechanisms natively:
+.RS
+.IP \(bu 3
+The vertical bar (\(oq|\(cq) operator routes the standard output of one process 
+directly into the standard input of another.
+.IP \(bu 3
+File descriptors can be explicitly redirected via standard operators (\(oq<\(cq, 
+\(oq>\(cq, and \(oq>>\(cq).
+.RE
+
+No massive scripting overhead or heavy internal variable caches are included; 
+the focus remains entirely on directing and managing binary execution pipelines 
+cleanly.
+
+.SH ENVIRONMENT
+
+.IP \fBPATH\fP
+A colon-separated list of directories searched by
+.B sh
+to locate executable utility binaries.
+
+.SH COPYRIGHT
+
+.B sh
+is software released under the Oku Public License (OPL v1.9). Authorship is 
+permanently attributed to its creators, while the code itself remains 
+unencumbered and free to propagate. See
+<https://github.com/JJDHI-3/oku-public-license>.
+
+.SH SEE ALSO
+.BR okumake (1),
+.BR okucc (1),
+.BR okuman (1)

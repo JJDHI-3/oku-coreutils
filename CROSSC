@@ -1,0 +1,29 @@
+# OKU Cross Compile Script
+#
+
+default: make man cc as sh done
+
+make:
+	@echo "OKU Cross Compiler"
+	@cc okumake/*.c -o ./okumake0
+	@echo "  CROSS    okumake0"
+man:
+	@cd okuman
+	@../okumake
+	@echo "  MAKE    okuman"
+	@cd ../
+cc:
+	@cd okucc
+	@../okumake
+	@echo "  MAKE    okucc"
+	@cd ..
+as:
+	@cd okuas
+	@../okumake
+	@echo "  MAKE    okuas"
+	@cd ..
+sh:
+	@echo "TODO.."
+done:
+	@echo "All OKU Core Utils Have been installed."
+

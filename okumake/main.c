@@ -640,7 +640,7 @@ main(int argc, char **argv)
 		else if ((ifd = fopen("Makefile", "r")) != NULL)
 			makefile = "Makefile";
         else if ((ifd = fopen("OKUmakefile", "r")) != NULL)
-            makefile = "OKUmakefile"
+            makefile = "OKUmakefile";
 		else
 			error("no makefile found");
 		goto read_makefile;

@@ -20,7 +20,7 @@
  #define AOUTNAME	"a.out"
 #endif
 
-#define OKUCCLIBC		"%s/lib/libokucc.a"
+#define OKUCCLIBC		"%s../okulibc/okulibc.a"
 
 #define PREFIX		'C'
 #define LPREFIX		'L'

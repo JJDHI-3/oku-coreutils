@@ -1,0 +1,105 @@
+.TH OKUCC 1 "16 June 2026" "OKU Foundation" "Usage Manual"
+.SH NAME
+.B okucc
+\(en the minimalist Oku C compiler
+.SH SYNOPSIS
+
+\fBokucc\fP
+.RB [ -cES ]
+.RB [ -o
+.IR outfile ]
+.RB [ -I
+.IR include_dir ]
+.RB [ --freestanding ]
+.RB [ --pure-syscalls ]
+.RI [ file \0...]
+
+.SH DESCRIPTION
+
+The
+.B okucc
+utility is a minimalist, high-performance C compiler designed for the OKU
+ecosystem. It translates C source files into optimized native machine code.
+In alignment with the OKU philosophy,
+.B okucc
+prioritizes predictable code generation, minimal compilation overhead, and 
+eschews unnecessary runtime bloat. It is designed to interface seamlessly with 
+low-level software architectures and bare-metal environments.
+
+By default,
+.B okucc
+targets the native host architecture (such as x86-64) and generates code 
+optimized for direct hardware execution.
+
+.SH OPTIONS
+
+.IP \fB-c\fP
+Compile or assemble the source files, but do not link. The linking stage is 
+skipped, and the compiler outputs raw object files.
+.IP \fB-E\fP
+Stop after the preprocessing stage. Do not run the compiler proper. The 
+output is preprocessed source code sent to standard output.
+.IP \fB-I\fP\ \fIinclude_dir\fP
+Add the directory
+.I include_dir
+to the list of directories to be searched for header files during 
+preprocessing. This option can be specified multiple times to add multiple 
+directories.
+.IP \fB-o\fP\ \fIoutfile\fP
+Place the primary output in
+.IR outfile .
+If this option is not specified, the default executable name is \(oqa.out\(cq.
+.IP \fB-S\fP
+Stop after the compilation stage proper; do not assemble. The output is a 
+human-readable text file containing target assembly code.
+.IP \fB--freestanding\fP
+Directs the compiler to target a freestanding environment. In this mode, 
+the compiler makes no assumptions about the presence of a standard C library 
+runtime layer, ensuring that the generated code is completely self-contained.
+.IP \fB--pure-syscalls\fP
+Forces the compiler to inline direct kernel system calls rather than emitting 
+external calls to a standard library runtime (such as libc). This mirrors 
+the design paradigms of the TAQBOL programming language ecosystem.
+
+.SH INPUT FILES
+
+The utility accepts source files ending with the following extensions:
+.IP \fB.c\fP
+C source files to be preprocessed, compiled, and optionally linked.
+.IP \fB.i\fP
+Preprocessed C source files ready for direct compilation.
+.IP \fB.s\fP
+Assembly language files to be sent directly to the assembler stage.
+
+.SH ENVIRONMENT
+
+.IP \fBOKU_INCLUDE_PATH\fP
+A colon-separated list of directories searched for header files, processed 
+after directories specified via the
+.B -I
+command-line option.
+
+.SH STANDARDS
+
+The
+.B okucc
+compiler implements a strict, predictable subset of modern ISO C standards, 
+optimizing for readability of output and performance of implementation over 
+convolved implementation edge-cases.
+
+By default, all compilation pipelines produce optimized freestanding code. 
+Integration with external linkers and standard runtimes is conditionally 
+supported but discouraged under baseline configurations.
+
+.SH COPYRIGHT
+
+.B okucc
+is software released under the Oku Public License (OPL v1.9). Authorship is 
+permanently attributed to its creators, while the code itself remains 
+unencumbered and free to propagate. See
+<https://github.com/JJDHI-3/oku-public-license>.
+
+.SH SEE ALSO
+.BR okumake (1),
+.BR okuas (1),
+.BR okuman (1)
